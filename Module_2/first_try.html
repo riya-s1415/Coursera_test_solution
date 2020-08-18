@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment Solution for Module 2</title>
+
+	<style>
+		
+		/****************** Base Styles ******************/
+		*{
+			box-sizing: border-box;
+			font-family:  Roboto,cursive; /*Helvetica*/
+			padding:0;
+		}
+		p{
+			/*text-align: left; 
+			width: 25%;
+			background-color: #808080;*/
+			text-align: center;
+			/*color: white;*/
+			height: 30px;
+			width:40%;
+			margin:0;
+			border-left: 3px solid black;
+			border-bottom: 3px solid black;
+			font-size: 125%;
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		/*#heading{
+			text-align: center;
+			border: 5px solid black;
+			font-size: 25%;
+			position: relative;
+			right: 0;
+			top: 0;
+		}*/
+		p.heading1{
+			background-color: #FF7F50;
+			/*overflow: hidden;*/
+		}
+		p.heading2{
+			background-color: #A52A2A;
+			color:white;
+			
+			/*text-align: center;
+			border: 5px solid black;
+			font-size: 125%;
+			position: relative;
+			right: 0;
+			top: 0;*/
+		}
+		p.heading3{
+			background-color: #DEB887;
+			
+			/*text-align: center;
+			border: 5px solid black;
+			font-size: 125%;
+			position: relative;
+			right: 0;
+			top: 0;*/
+		}
+		h1{
+			text-align: center;
+			font-size: 175%;
+		}
+
+		div{
+			margin:0;
+			
+			/*float: left;
+			position: relative;
+			border: 3px solid black;
+			padding-left: 5px;
+			padding-top: 35px;
+			margin: 10px 5px 10px 5px;
+			box-sizing: border-box;*/
+		}
+
+		div#container{
+			background-color: #808080;
+			float: left;
+			position: relative;
+			border: 3px solid black;
+			padding-left: 5px;
+			padding-top: 35px;
+			margin: 10px 5px 10px 5px;
+			box-sizing: border-box;
+			
+		}
+
+		/*div#container2{
+			background-color: #808080;
+			color:white;
+			float: left;
+			position: relative;
+			border: 3px solid black;
+			padding-left: 5px;
+			padding-top: 35px;
+			margin: 10px 5px 10px 5px;
+			box-sizing: border-box;		
+		}*/
+
+		/*div#container3{
+			background-color: #808080;
+			
+			float: left;
+			position: relative;
+			border: 3px solid black;
+			padding-left: 5px;
+			padding-top: 35px;
+			margin: 10px 5px 10px 5px;
+			box-sizing: border-box;
+		}*/
+
+
+		/***************** Simple Responsive Framework ******************/
+		.row{
+			width: 100%;
+		}
+
+		/******************** Large Screens ******************/
+		@media (min-width: 992px){
+			.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+				float: left;
+			}
+			.col-lg-1{
+				width: 8.33%;
+			}
+			.col-lg-2{
+				width: 16.66%;
+			}
+			.col-lg-3{
+				width: 25%;
+			}
+			.col-lg-4{
+				width: 32%;
+			}
+			.col-lg-5{
+				width: 41.66%;
+			}
+			.col-lg-6{
+				width: 48%;
+			}
+			.col-lg-7{
+				width: 58.33%;
+			}
+			.col-lg-8{
+				width: 66.66%;
+			}
+			.col-lg-9{
+				width: 74.99%;
+			}
+			.col-lg-10{
+				width: 83.33%;
+			}
+			.col-lg-11{
+				width: 91.66%;
+			}
+			.col-lg-12{
+				width: 100%;
+			}
+			/*div#container1{
+				width: 31%;
+			}
+			div#container2{
+				width: 31%;
+			}
+			div#container3{
+				width: 31%;
+			}*/
+		}
+
+		/******************** Medium Screens *****************/
+		@media (min-width: 768px) and (max-width: 991px){
+			.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+				float: left;
+			}
+			.col-md-1{
+				width: 8.33%;
+			}
+			.col-md-2{
+				width: 16.66%;
+			}
+			.col-md-3{
+				width: 25%;
+			}
+			.col-md-4{
+				width: 32%;
+			}
+			.col-md-5{
+				width: 41.66%;
+			}
+			.col-md-6{
+				width: 48%;
+			}
+			.col-md-7{
+				width: 58.33%;
+			}
+			.col-md-8{
+				width: 66.66%;
+			}
+			.col-md-9{
+				width: 74.99%;
+			}
+			.col-md-10{
+				width: 83.33%;
+			}
+			.col-md-11{
+				width: 91.66%;
+			}
+			.col-md-12{
+				width: 97%;
+			}
+			/*div#container1{
+				width: 47%;
+
+			}
+			div#container2{
+				width: 47%;
+			}
+			div#container3{
+				width: 96%;
+			}*/
+		}
+
+		/****************** Small Screen ******************/
+		@media (max-width: 767px){
+			.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+				float: left;
+			}
+			.col-sm-1{
+				width: 8.33%;
+			}
+			.col-sm-2{
+				width: 16.66%;
+			}
+			.col-sm-3{
+				width: 25%;
+			}
+			.col-sm-4{
+				width: 32%;
+			}
+			.col-sm-5{
+				width: 41.66%;
+			}
+			.col-sm-6{
+				width: 48%;
+			}
+			.col-sm-7{
+				width: 58.33%;
+			}
+			.col-sm-8{
+				width: 66.66%;
+			}
+			.col-sm-9{
+				width: 74.99%;
+			}
+			.col-sm-10{
+				width: 83.33%;
+			}
+			.col-sm-11{
+				width: 91.66%;
+			}
+			.col-sm-12{
+				width: 100%;
+			}
+			/*div#container1{
+				width: 96%;
+			}
+			div#container2{
+				width: 96%;
+			}
+			div#container3{
+				width: 96%;
+			}*/
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<h1>Our Menu</h1>
+
+	<div class="row">
+		<!--<div id="container1" class="col-lg-4, col-md-6, col-sm-12">
+			<p class="heading1">Chicken</p>
+			    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis mauris sapien, a pulvinar magna sodales ut. Pellentesque fermentum consequat mi, non dictum nibh convallis non. Etiam id rutrum eros. Nullam tempus vehicula justo quis euismod.</div>
+		</div>-->
+
+		<div id="container" class="col-lg-4 col-md-6 col-sm-12">
+			<p class="heading1">Chicken</p>
+			    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis mauris sapien, a pulvinar magna sodales ut. Pellentesque fermentum consequat mi, non dictum nibh convallis non. Etiam id rutrum eros. Nullam tempus vehicula justo quis euismod.</div>
+		</div>
+
+		<div id="container" class="col-lg-4 col-md-6 col-sm-12">
+			<p class="heading2">Beef</p>
+			    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis mauris sapien, a pulvinar magna sodales ut. Pellentesque fermentum consequat mi, non dictum nibh convallis non. Etiam id rutrum eros. Nullam tempus vehicula justo quis euismod.</div>
+		</div>
+
+		<div id="container" class="col-lg-4 col-md-12 col-sm-12">
+			<p class="heading3">Sushi</p>
+			    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis mauris sapien, a pulvinar magna sodales ut. Pellentesque fermentum consequat mi, non dictum nibh convallis non. Etiam id rutrum eros. Nullam tempus vehicula justo quis euismod.</div>
+		</div>
+	</div>
+
+</body>
+</html>

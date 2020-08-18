@@ -1,0 +1,85 @@
+body{
+	font-size: 16px;
+	background-color: #A28089/*#D74177/#38ADAE /*#FE90AF/*#A52A2A/* #800000/*#61122f*/;
+	font-family: Roboto, cursive;
+}
+
+#header-nav{
+	background-color: #9DF9EF/*#FFA886/*#FFE98A/#CD295A /*#C6EA8D/* #FFE5B4*/
+}
+
+.navbar-brand{
+	padding-top: 5px;
+}
+.navbar-brand h1 {
+	color: #A28089;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration: none;
+}
+
+#nav-list{
+	margin-top: 10px;
+}
+
+#nav-list li{
+	border: 1px solid #A28089;
+}
+
+#nav-list a{
+	color: #A28089;
+	text-align: center;
+}
+
+#nav-list a:hover{
+	background-color: #51E2F5;
+}
+#nav-list a span{
+	font-size: 1.5em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+	border: 1px solid #A28089;
+}
+
+.navbar-header button.navbar-toggle{
+	clear: both;
+	margin-top: -30px;
+}/* Header Ends*/
+
+h1{
+	color: #FFA886;
+	padding-bottom: 30px;
+}
+
+h2{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+section{
+	background-color: #9DF9EF;
+	border: 2px solid #FFA886;
+	margin: 0;
+}
+
+section p{
+	margin: 10px;
+	text-align: justify;
+}
+
+#context {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+section a{
+	margin-left: 10px;
+}
